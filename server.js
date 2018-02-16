@@ -1,19 +1,26 @@
-var User = require("./data/friends.js");
+var User = require("./app/data/friends.js");
 
 var express = require("express");
+var bodyParser = require("body-parser");
 
 var app = express();
-var port = 3666;
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-var exphbs = require("express-handlebars");
+var PORT = 6666;
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+var exphbs = require("handlebars");
 
-
-
-
-
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// app.set("view engine", "handlebars");
 
 
-app.listen(port);
+
+
+
+
+
+app.listen(PORT, function() {
+  console.log("App listening on PORT: " + PORT);
+});
+;

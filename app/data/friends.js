@@ -9,7 +9,7 @@ var friendsArr = [
 	planet: "Jittania",
 	gender: "male",
 	age: 55,
-	photo: "",
+	photo: "../public/krebux_200x300.jpg",
 	scores: [5,2,4,1,3,4,1,5,1,2]
 },{
 	name: "Guguhl",
@@ -17,7 +17,7 @@ var friendsArr = [
 	planet: "Wixilal",
 	gender: "female",
 	age: 25,
-	photo: "",
+	photo: "../public/gughul_200x300.jpg",
 	scores: [5,2,2,3,5,3,2,5,5,5]
 },{
 	name: "Troemmed",
@@ -25,7 +25,7 @@ var friendsArr = [
 	planet: "Aotia 4",
 	gender: "non-binary",
 	age: 803,
-	photo: "",
+	photo: "../public/troemmed_200x300.jpg",
 	scores: [4,4,3,1,2,3,5,5,3,4]
 },{
 	name: "Gaz Mabbutt",
@@ -33,7 +33,7 @@ var friendsArr = [
 	planet: "Corris",
 	gender: "male",
 	age: 41,
-	photo: "",
+	photo: "../public/gary_mabbutt_200x300.jpg",
 	scores: [5,4,5,2,3,1,1,2,2,4]
 },{
 	name: "Zearyhs",
@@ -41,7 +41,7 @@ var friendsArr = [
 	planet: "Hetoo Prime",
 	gender: "female",
 	age: 18,
-	photo: "",
+	photo: "../public/zearhy_200x300.jpg",
 	scores: [4,1,2,3,5,4,2,5,4,5]
 },{
 	name: "Jout'elz",
@@ -49,7 +49,7 @@ var friendsArr = [
 	planet: "Sa'hav Oculo",
 	gender: "non-binary",
 	age: 1800,
-	photo: "",
+	photo: "../public/jout'elz_200x300.png",
 	scores: [3,4,4,5,3,2,1,1,5,4]
 },{
 	name: "Gusteho",
@@ -57,7 +57,7 @@ var friendsArr = [
 	planet: "Loriak",
 	gender: "male",
 	age: 21,
-	photo: "",
+	photo: "../public/gusteho_200x300.jpg",
 	scores: [5,5,4,4,4,5,1,4,3,4]
 },{
 	name: "Phalnugh",
@@ -65,15 +65,15 @@ var friendsArr = [
 	planet: "Nirisia",
 	gender: "female",
 	age: 36,
-	photo: "",
+	photo: "../public/phalnugh_200x300.jpg",
 	scores: [1,2,3,4,4,2,1,4,5,5]
 },{
 	name: "Karry Hane",
 	species: "Taulian",
 	planet: "Araimisia",
 	gender: "male",
-	age: 91,
-	photo: "",
+	age: 24,
+	photo: "../public/harry_kane_200x300.jpg",
 	scores: [4,1,2,5,2,5,5,4,5,1]
 },{
 	name: "Stucussa",
@@ -81,7 +81,7 @@ var friendsArr = [
 	planet: "Aquilae VIII",
 	gender: "female",
 	age: 23,
-	photo: "",
+	photo: "../public/stucussa_200x300.png",
 	scores: [1,4,5,4,5,4,5,1,5,4]
 },{
 	name: "Allan",
@@ -89,7 +89,7 @@ var friendsArr = [
 	planet: "Talescria",
 	gender: "male",
 	age: 31,
-	photo: "",
+	photo: "../public/Allan_the_Alien_200x300.jpg",
 	scores: [3,1,3,2,3,5,4,2,2,4]
 },{
 	name: "Nolan",
@@ -97,7 +97,7 @@ var friendsArr = [
 	planet: "Viltrum",
 	gender: "male",
 	age: 3106,
-	photo: "",
+	photo: "../public/Nolan-Grayson_200x300.jpg",
 	scores: [1,4,3,2,4,2,3,1,5,5]
 },{
 	name: "Andressa",
@@ -105,7 +105,7 @@ var friendsArr = [
 	planet: "Thraxa",
 	gender: "female",
 	age: 27,
-	photo: "",
+	photo: "../public/andress_200x300.jpg",
 	scores: [3,3,4,2,5,1,3,4,3,3]
 },{
 	name: "Marko",
@@ -113,7 +113,7 @@ var friendsArr = [
 	planet: "Wreath",
 	gender: "male",
 	age: 32,
-	photo: "",
+	photo: "../public/marko_200x300.jpg",
 	scores: [2,3,2,5,5,3,1,5,2,5]
 },{
 	name: "Alana",
@@ -121,7 +121,7 @@ var friendsArr = [
 	planet: "Landfall",
 	gender: "female",
 	age: 28,
-	photo: "",
+	photo: "../public/alana_200x300.jpg",
 	scores: [1,1,4,2,5,2,5,2,4,2]
 }
 ];
@@ -141,7 +141,6 @@ var User = function (name, species, planet, gender, age, scores) {
 
 			var currentObj = friendsArr[i];
 			var totalDiff = 0;
-			var scoreDiff = 0;
 
 			for (var j = 0; j < this.scores.length; j++){
 				
@@ -161,7 +160,7 @@ var User = function (name, species, planet, gender, age, scores) {
 
 				console.log(compareArr);
 
-				var bestie = friendsArr[compareArr.indexOf(Math.min.apply(null, compareArr))].name;
+				var bestie = friendsArr[compareArr.indexOf(Math.min.apply(null, compareArr))].name; //Math.moin.apply(null, Arr) gives min number in array
 				console.log(bestie);
 
 
@@ -171,7 +170,7 @@ var User = function (name, species, planet, gender, age, scores) {
 
 module.exports = User;
 
-	var mike = new User ("Mike", "Human", "Earth", "male", 36, [1,4,3,2,4,2,3,1,5,5]);
+	var mike = new User ("Mike", "Human", "Earth", "male", 36, [1,4,5,4,5,4,5,1,5,4]);
 	console.log(mike);
 
 	mike.match();
