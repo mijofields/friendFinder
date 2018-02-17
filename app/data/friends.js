@@ -2,14 +2,13 @@ var compareArr = [];
 
 var friendsArr = [
 
-
 {
 	name: "Krebux",
 	species: "Dalsaleran",
 	planet: "Jittania",
 	gender: "male",
 	age: 55,
-	photo: "../public/krebux_200x300.jpg",
+	photo: "__dirname/../public/krebux_200x300.jpg",
 	scores: [5,2,4,1,3,4,1,5,1,2]
 },{
 	name: "Guguhl",
@@ -134,7 +133,7 @@ var User = function (name, species, planet, gender, age, scores) {
 	this.gender = gender;
 	this.age = age;
 	this.scores = scores;
-	this.match = function () {
+	this.match = function (User) {
 
 
 		for (var i = 0 ; i < friendsArr.length; i ++) {
@@ -146,10 +145,10 @@ var User = function (name, species, planet, gender, age, scores) {
 				
 
 				scoreDiff = Math.abs(this.scores[j] - currentObj.scores[j]);
-				// console.log(scoreDiff)
+		
 
 				totalDiff += scoreDiff;
-				// console.log(totalDiff);
+		
 
 			}; //inner for loop
 
@@ -168,10 +167,10 @@ var User = function (name, species, planet, gender, age, scores) {
 }; // end User
 
 
-module.exports = User;
+module.exports =  {
 
-	var mike = new User ("Mike", "Human", "Earth", "male", 36, [1,4,5,4,5,4,5,1,5,4]);
-	console.log(mike);
+		User: User,
+		friendsArr: friendsArr	
 
-	mike.match();
+	};
 
