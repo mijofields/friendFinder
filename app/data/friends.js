@@ -8,7 +8,7 @@ var friendsArr = [
 	planet: "Jittania",
 	gender: "male",
 	age: 55,
-	photo: "__dirname/../public/krebux_200x300.jpg",
+	photo: "/krebux_200x300.jpg",
 	scores: [5,2,4,1,3,4,1,5,1,2]
 },{
 	name: "Guguhl",
@@ -16,7 +16,7 @@ var friendsArr = [
 	planet: "Wixilal",
 	gender: "female",
 	age: 25,
-	photo: "../public/gughul_200x300.jpg",
+	photo: "/guguhl_200x300.jpg",
 	scores: [5,2,2,3,5,3,2,5,5,5]
 },{
 	name: "Troemmed",
@@ -24,7 +24,7 @@ var friendsArr = [
 	planet: "Aotia 4",
 	gender: "non-binary",
 	age: 803,
-	photo: "../public/troemmed_200x300.jpg",
+	photo: "/troemmed_200x300.jpg",
 	scores: [4,4,3,1,2,3,5,5,3,4]
 },{
 	name: "Gaz Mabbutt",
@@ -32,7 +32,7 @@ var friendsArr = [
 	planet: "Corris",
 	gender: "male",
 	age: 41,
-	photo: "../public/gary_mabbutt_200x300.jpg",
+	photo: "/gary_mabbutt_200x300.jpg",
 	scores: [5,4,5,2,3,1,1,2,2,4]
 },{
 	name: "Zearyhs",
@@ -40,7 +40,7 @@ var friendsArr = [
 	planet: "Hetoo Prime",
 	gender: "female",
 	age: 18,
-	photo: "../public/zearhy_200x300.jpg",
+	photo: "/zearhys_200x300.jpg",
 	scores: [4,1,2,3,5,4,2,5,4,5]
 },{
 	name: "Jout'elz",
@@ -48,7 +48,7 @@ var friendsArr = [
 	planet: "Sa'hav Oculo",
 	gender: "non-binary",
 	age: 1800,
-	photo: "../public/jout'elz_200x300.png",
+	photo: "/jout'elz_200x300.png",
 	scores: [3,4,4,5,3,2,1,1,5,4]
 },{
 	name: "Gusteho",
@@ -56,7 +56,7 @@ var friendsArr = [
 	planet: "Loriak",
 	gender: "male",
 	age: 21,
-	photo: "../public/gusteho_200x300.jpg",
+	photo: "/gusteho_200x300.jpg",
 	scores: [5,5,4,4,4,5,1,4,3,4]
 },{
 	name: "Phalnugh",
@@ -64,7 +64,7 @@ var friendsArr = [
 	planet: "Nirisia",
 	gender: "female",
 	age: 36,
-	photo: "../public/phalnugh_200x300.jpg",
+	photo: "/phalnugh_200x300.jpg",
 	scores: [1,2,3,4,4,2,1,4,5,5]
 },{
 	name: "Karry Hane",
@@ -72,7 +72,7 @@ var friendsArr = [
 	planet: "Araimisia",
 	gender: "male",
 	age: 24,
-	photo: "../public/harry_kane_200x300.jpg",
+	photo: "/harry_kane_200x300.jpg",
 	scores: [4,1,2,5,2,5,5,4,5,1]
 },{
 	name: "Stucussa",
@@ -80,7 +80,7 @@ var friendsArr = [
 	planet: "Aquilae VIII",
 	gender: "female",
 	age: 23,
-	photo: "../public/stucussa_200x300.png",
+	photo: "/stucussa_200x300.png",
 	scores: [1,4,5,4,5,4,5,1,5,4]
 },{
 	name: "Allan",
@@ -88,7 +88,7 @@ var friendsArr = [
 	planet: "Talescria",
 	gender: "male",
 	age: 31,
-	photo: "../public/Allan_the_Alien_200x300.jpg",
+	photo: "/Allan_the_Alien_200x300.jpg",
 	scores: [3,1,3,2,3,5,4,2,2,4]
 },{
 	name: "Nolan",
@@ -96,7 +96,7 @@ var friendsArr = [
 	planet: "Viltrum",
 	gender: "male",
 	age: 3106,
-	photo: "../public/Nolan-Grayson_200x300.jpg",
+	photo: "/Nolan-Grayson_200x300.jpg",
 	scores: [1,4,3,2,4,2,3,1,5,5]
 },{
 	name: "Andressa",
@@ -104,7 +104,7 @@ var friendsArr = [
 	planet: "Thraxa",
 	gender: "female",
 	age: 27,
-	photo: "../public/andress_200x300.jpg",
+	photo: "/andressa_200x300.jpg",
 	scores: [3,3,4,2,5,1,3,4,3,3]
 },{
 	name: "Marko",
@@ -112,7 +112,7 @@ var friendsArr = [
 	planet: "Wreath",
 	gender: "male",
 	age: 32,
-	photo: "../public/marko_200x300.jpg",
+	photo: "/marko_200x300.jpg",
 	scores: [2,3,2,5,5,3,1,5,2,5]
 },{
 	name: "Alana",
@@ -120,7 +120,7 @@ var friendsArr = [
 	planet: "Landfall",
 	gender: "female",
 	age: 28,
-	photo: "../public/alana_200x300.jpg",
+	photo: "/alana_200x300.jpg",
 	scores: [1,1,4,2,5,2,5,2,4,2]
 }
 ];
