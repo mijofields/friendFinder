@@ -1,12 +1,41 @@
 
+
+
 $(document).ready(function() {
 
-var scores = [];
+
 
 
 $('#submit').on("click", function(){
 
-	prevent.default();
+
+	if(	$('#name').val() == ""){
+
+			alert("Please enter your name");
+
+
+	} else if ($('#species').val() == ""){
+
+			alert("Please enter the name of your species");
+
+
+	} else if ($('#planet').val() == ""){
+
+			alert("Please enter the name of your home planet");
+
+
+	} else if ($('#gender').val() == ""){
+
+			alert("Please enter your gender");
+
+	} else if ($('#age').val() == ""){
+
+			alert("Please enter your age, converted to Earth years");
+
+	} else {
+
+	event.preventDefault();
+	var scores = [];
 		
 	var name = $('#name').val().trim();
 	var species = $('#species').val().trim();
@@ -14,24 +43,20 @@ $('#submit').on("click", function(){
 	var gender = $('#gender').val().trim();
 	var age = $('#age').val().trim();
 
-	var q1 = $('#q1').val().trim();
-	var q2 = $('#q2').val().trim();
-	var q3 = $('#q3').val().trim();
-	var q4 = $('#q4').val().trim();
-	var q5 = $('#q5').val().trim();
-	var q6 = $('#q6').val().trim();
-	var q7 = $('#q7').val().trim();
-	var q8 = $('#q8').val().trim();
-	var q9 = $('#q9').val().trim();
-	var q10 = $('#q10').val().trim();
 
-	scores.push(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10);
+	for (var i = 1 ; i < 11; i++){
 
+
+		scores.push(parseInt($('#q'+i).val().substring(0,1)));
+
+
+
+	}} //end of for loop
 
 
 	console.log(scores);
-
-
+	console.log(name);
+	console.log(species);
 
 
 

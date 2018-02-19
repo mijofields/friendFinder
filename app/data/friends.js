@@ -133,7 +133,7 @@ var User = function (name, species, planet, gender, age, scores) {
 	this.gender = gender;
 	this.age = age;
 	this.scores = scores;
-	this.match = function (User) {
+	this.match = function (scores) {
 
 
 		for (var i = 0 ; i < friendsArr.length; i ++) {
