@@ -9,40 +9,40 @@ $(document).ready(function() {
 $('#submit').on("click", function(){
 
 
+	event.preventDefault();
+
+
 	if(	$('#name').val() == ""){
 
 			alert("Please enter your name");
+			return;
 
 
 	} else if ($('#species').val() == ""){
 
 			alert("Please enter the name of your species");
+			return;
 
 
 	} else if ($('#planet').val() == ""){
 
 			alert("Please enter the name of your home planet");
+			return;
 
 
 	} else if ($('#gender').val() == ""){
 
 			alert("Please enter your gender");
+			return;
 
 	} else if ($('#age').val() == ""){
 
 			alert("Please enter your age, converted to Earth years");
+			return;
 
 	} else {
 
-	event.preventDefault();
-	var scores = [];
-		
-	var name = $('#name').val().trim();
-	var species = $('#species').val().trim();
-	var planet = $('#planet').val().trim();
-	var gender = $('#gender').val().trim();
-	var age = $('#age').val().trim();
-
+		var scores = [];
 
 	for (var i = 1 ; i < 11; i++){
 
@@ -51,13 +51,26 @@ $('#submit').on("click", function(){
 
 
 
-	}} //end of for loop
+	}}; //end of for loop
 
+var newUser = {
 
-	console.log(scores);
-	console.log(name);
-	console.log(species);
+name: $('#name').val().trim(),
+species: $('#species').val().trim(),
+planet: $('#planet').val().trim(),
+gender: $('#gender').val().trim(),
+age: $('#age').val().trim(),
+scores: scores
 
+};
+
+console.log(newUser);
+
+$.post("/survey", newUser, function(newUser) {
+
+    	console.log(newUser);
+
+        });
 
 
 
