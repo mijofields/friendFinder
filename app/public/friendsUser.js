@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 
 $('#submit').on("click", function(){
-
+console.log("click works");
 
 	event.preventDefault();
 
@@ -48,6 +48,7 @@ $('#submit').on("click", function(){
 
 
 		scores.push(parseInt($('#q'+i).val().substring(0,1)));
+		console.log("working");
 
 
 
@@ -66,11 +67,11 @@ scores: scores
 
 console.log(newUser);
 
-$.post("/survey", newUser, function(newUser) {
+// $.post("/survey", newUser, function(newUser) {
 
-    	console.log(newUser);
+//     	console.log("this works");
 
-        });
+//         });
 
 
 

@@ -9,14 +9,20 @@ module.exports = function(app){
 
 	app.get('/survey', function(req, res){
 		res.sendFile(path.join(__dirname, '../public/survey.html'));
-
-	app.post('/survey', function(req, res) {
-
-		var user =  new User (newUser);
-		res.json(user);
-
-
-
 	});
+
+
+	app.get('/home', function(req, res){
+		res.sendFile(path.join(__dirname, '../public/home.html'));
 	});
+
+	// app.post('/survey', function(req, res) {
+	// 	res.sendFile(path.join(__dirname, '../public/survey.html'));
+
+	// 	var user =  new User (newUser);
+	// 	console.log(user);
+	// 	// res.json(user);
+
+	// });
+
 };
