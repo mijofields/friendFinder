@@ -1,3 +1,8 @@
+var friends = require("../data/friends.js");
+var friendsArr	= friends.friendsArr;
+var User = friends.User;
+
+
 var path = require('path');
 
 
@@ -16,13 +21,6 @@ module.exports = function(app){
 		res.sendFile(path.join(__dirname, '../public/home.html'));
 	});
 
-	// app.post('/survey', function(req, res) {
-	// 	res.sendFile(path.join(__dirname, '../public/survey.html'));
 
-	// 	var user =  new User (newUser);
-	// 	console.log(user);
-	// 	// res.json(user);
-
-	// });
 
 };

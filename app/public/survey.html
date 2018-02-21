@@ -4,10 +4,14 @@
 	<meta charset="UTF-8">
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> <!--bootstrap cdn-->
+
 <script
-  src="http://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
+
+  	 <script type="text/javascript" src="friendsUser.js"></script>
+
 	</head>
 	<body>
 
@@ -220,3 +224,76 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</body>
 </html>
+
+<script type="text/javascript">
+
+	$('#submit').on("click", function(){
+
+
+	event.preventDefault();
+
+
+	if(	$('#name').val() == ""){
+
+			alert("Please enter your name");
+			return;
+
+
+	} else if ($('#species').val() == ""){
+
+			alert("Please enter the name of your species");
+			return;
+
+
+	} else if ($('#planet').val() == ""){
+
+			alert("Please enter the name of your home planet");
+			return;
+
+
+	} else if ($('#gender').val() == ""){
+
+			alert("Please enter your gender");
+			return;
+
+	} else if ($('#age').val() == ""){
+
+			alert("Please enter your age, converted to Earth years");
+			return;
+
+	} else {
+
+		var scores = [];
+
+	for (var i = 1 ; i < 11; i++){
+
+
+		scores.push(parseInt($('#q'+i).val().substring(0,1)));
+
+
+	}}; //end of for loop
+
+var newUser = {
+
+name: $('#name').val().trim(),
+species: $('#species').val().trim(),
+planet: $('#planet').val().trim(),
+gender: $('#gender').val().trim(),
+age: $('#age').val().trim(),
+scores: scores
+
+};
+
+// console.log(newUser.name + "\n" +  newUser.species +"\n" +newUser.planet +"\n" +newUser.gender +"\n" +  newUser.age + "\n" +  newUser.scores);
+
+$.post("api/friends", newUser, function(data) {
+
+    	console.log("Client post");
+
+        });
+
+
+
+		}); //end of submit
+
+	

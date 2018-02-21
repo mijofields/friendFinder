@@ -5,9 +5,8 @@ $(document).ready(function() {
 
 
 
-
 $('#submit').on("click", function(){
-console.log("click works");
+
 
 	event.preventDefault();
 
@@ -48,8 +47,6 @@ console.log("click works");
 
 
 		scores.push(parseInt($('#q'+i).val().substring(0,1)));
-		console.log("working");
-
 
 
 	}}; //end of for loop
@@ -65,13 +62,13 @@ scores: scores
 
 };
 
-console.log(newUser);
+// console.log(newUser.name + "\n" +  newUser.species +"\n" +newUser.planet +"\n" +newUser.gender +"\n" +  newUser.age + "\n" +  newUser.scores);
 
-// $.post("/survey", newUser, function(newUser) {
+$.post("api/friends", newUser, function(data) {
 
-//     	console.log("this works");
+    	console.log("Client post");
 
-//         });
+        });
 
 
 
