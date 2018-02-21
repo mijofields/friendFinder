@@ -12,13 +12,12 @@ module.exports = function(app){
 		res.json(friendsArr);
 	});
 
-	app.post('api/friends', function(req, res) {
-		res.sendFile(path.join(__dirname, '../public/survey.html'));
 
-		var user =  new User (newUser);
-		console.log(user);
-		// res.json(user);
+	app.post('/api/friends', function(req, res) {
 
+		var user =  new User (req.body.name, req.body.species, req.body.planet, req.body.gender, req.body.age, req.body.scores);
+		user.match();
+		console.log(user.bestie);
 	});
 
 

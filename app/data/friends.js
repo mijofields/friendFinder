@@ -133,6 +133,7 @@ var User = function (name, species, planet, gender, age, scores) {
 	this.gender = gender;
 	this.age = age;
 	this.scores = scores;
+	this.bestie = "";
 	this.match = function (scores) {
 
 
@@ -157,9 +158,9 @@ var User = function (name, species, planet, gender, age, scores) {
 
 		}; //outer for loop
 
-				console.log(compareArr);
+				// console.log(compareArr);
 
-				var bestie = friendsArr[compareArr.indexOf(Math.min.apply(null, compareArr))].name; //Math.moin.apply(null, Arr) gives min number in array
+				bestie = friendsArr[compareArr.indexOf(Math.min.apply(null, compareArr))]; //Math.moin.apply(null, Arr) gives min number in array
 				console.log(bestie);
 
 

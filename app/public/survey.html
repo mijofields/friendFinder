@@ -219,81 +219,11 @@
 		</nav>
 
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</body>
 </html>
 
-<script type="text/javascript">
-
-	$('#submit').on("click", function(){
 
 
-	event.preventDefault();
-
-
-	if(	$('#name').val() == ""){
-
-			alert("Please enter your name");
-			return;
-
-
-	} else if ($('#species').val() == ""){
-
-			alert("Please enter the name of your species");
-			return;
-
-
-	} else if ($('#planet').val() == ""){
-
-			alert("Please enter the name of your home planet");
-			return;
-
-
-	} else if ($('#gender').val() == ""){
-
-			alert("Please enter your gender");
-			return;
-
-	} else if ($('#age').val() == ""){
-
-			alert("Please enter your age, converted to Earth years");
-			return;
-
-	} else {
-
-		var scores = [];
-
-	for (var i = 1 ; i < 11; i++){
-
-
-		scores.push(parseInt($('#q'+i).val().substring(0,1)));
-
-
-	}}; //end of for loop
-
-var newUser = {
-
-name: $('#name').val().trim(),
-species: $('#species').val().trim(),
-planet: $('#planet').val().trim(),
-gender: $('#gender').val().trim(),
-age: $('#age').val().trim(),
-scores: scores
-
-};
-
-// console.log(newUser.name + "\n" +  newUser.species +"\n" +newUser.planet +"\n" +newUser.gender +"\n" +  newUser.age + "\n" +  newUser.scores);
-
-$.post("api/friends", newUser, function(data) {
-
-    	console.log("Client post");
-
-        });
-
-
-
-		}); //end of submit
-
-	

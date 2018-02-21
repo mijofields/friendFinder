@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 
 
-$('#submit').on("click", function(){
+$('#submit').on("click", function(event){
 
 
 	event.preventDefault();
@@ -51,6 +51,8 @@ $('#submit').on("click", function(){
 
 	}}; //end of for loop
 
+	
+
 var newUser = {
 
 name: $('#name').val().trim(),
@@ -62,11 +64,23 @@ scores: scores
 
 };
 
-// console.log(newUser.name + "\n" +  newUser.species +"\n" +newUser.planet +"\n" +newUser.gender +"\n" +  newUser.age + "\n" +  newUser.scores);
+	$("#name").val("");
+	$('#species').val("");
+	$('#planet').val("");
+	$('#gender').val("");
+	$('#age').val("");
 
-$.post("api/friends", newUser, function(data) {
 
-    	console.log("Client post");
+console.log(newUser);
+
+
+$.post('/api/friends', newUser, function(data) {
+
+
+	console.log("post has worked here is the response");
+
+	console.log(json(data));
+
 
         });
 
@@ -74,4 +88,4 @@ $.post("api/friends", newUser, function(data) {
 
 		}); //end of submit
 
-})// end of doc ready
+});// end of doc ready
