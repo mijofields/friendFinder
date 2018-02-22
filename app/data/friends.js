@@ -160,8 +160,8 @@ var User = function (name, species, planet, gender, age, scores) {
 
 				// console.log(compareArr);
 
-				bestie = friendsArr[compareArr.indexOf(Math.min.apply(null, compareArr))]; //Math.moin.apply(null, Arr) gives min number in array
-				console.log(bestie);
+				this.bestie = friendsArr[compareArr.indexOf(Math.min.apply(null, compareArr))]; //Math.moin.apply(null, Arr) gives min number in array
+				// console.log(bestie);
 
 
 }; //end of match
@@ -171,7 +171,7 @@ var User = function (name, species, planet, gender, age, scores) {
 module.exports =  {
 
 		User: User,
-		friendsArr: friendsArr	
+		friendsArr: friendsArr
 
 	};
 

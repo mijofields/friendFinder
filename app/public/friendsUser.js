@@ -74,12 +74,14 @@ scores: scores
 console.log(newUser);
 
 
-$.post('/api/friends', newUser, function(data) {
+$.post('/api/friends', newUser, function(res) {
 
 
-	console.log("post has worked here is the response");
+	console.log(res);
 
-	console.log(json(data));
+	
+
+	
 
 
         });
