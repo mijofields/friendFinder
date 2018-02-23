@@ -22,6 +22,7 @@ module.exports = function(app){
 
 		// console.log(user.bestie);
 		res.json(user.bestie);
+		return;
 		
 	});
 

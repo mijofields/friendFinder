@@ -77,11 +77,13 @@ console.log(newUser);
 $.post('/api/friends', newUser, function(res) {
 
 
-	console.log(res);
+	$("#bestieImg").attr("src", res.photo);
+	$("#bestieText").text("Congrats " + newUser.name + ", you have been macthed with our awesome alien, " + res.name + ". " 
+		+ res.name + " is a " + res.species + " from the planet " + res.planet + " and has " + res.age + 
+		" Earth years. You guys are going to get on brilliantly!");
 
-	
-
-	
+	$('#bestieModal').modal('show');
+	return;
 
 
         });
@@ -89,5 +91,6 @@ $.post('/api/friends', newUser, function(res) {
 
 
 		}); //end of submit
+return;  //so that when the modal is closed we can run it all again!!!
 
 });// end of doc ready
