@@ -29,7 +29,8 @@ $('#submit').on("click", function(event){
 			return;
 
 
-	} else if ($('#gender').val() == ""){
+	} 
+	else if ($('#gender').val() == ""){ 
 
 			alert("Please enter your gender");
 			return;
@@ -70,15 +71,18 @@ scores: scores
 	$('#gender').val("");
 	$('#age').val("");
 
-
+console.log("new user");
 console.log(newUser);
 
 
 $.post('/api/friends', newUser, function(res) {
 
+	console.log("res");
+	console.log(res);
+
 
 	$("#bestieImg").attr("src", res.photo);
-	$("#bestieText").text("Congrats " + newUser.name + ", you have been macthed with our awesome alien, " + res.name + ". " 
+	$("#bestieText").text("Congrats " + newUser.name + ", your outlook on life makes us sure you will get     have been macthed with our awesome " + res.species + res.name + ". " 
 		+ res.name + " is a " + res.species + " from the planet " + res.planet + " and has " + res.age + 
 		" Earth years. You guys are going to get on brilliantly!");
 

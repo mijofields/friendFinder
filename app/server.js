@@ -2,23 +2,24 @@
 
 var express = require("express");
 var path = require("path");
+var bodyParser = require("body-parser");
 
 var app = express();
-var PORT = 4321;
+var port = process.env.PORT || 4812;
 
-var bodyParser = require("body-parser");
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static('public'));
 
 
-//routes required as per the homework instructions
+//routes
 require("./routing/apiRoutes")(app);
 require("./routing/htmlRoutes")(app);
 
 
 
-app.listen(PORT, function() {
-  console.log("App listening on PORT: " + PORT);
+app.listen(port, function() {
+  console.log("App listening on PORT: " + port);
 });

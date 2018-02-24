@@ -16,9 +16,15 @@ module.exports = function(app){
 
 	app.post('/api/friends', function(req, res) {
 
-		var user =  new User (req.body.name, req.body.species, req.body.planet, req.body.gender, req.body.age, req.body.scores);
+
+		console.log("req");
 		console.log(req.body);
+
+		var user =  new User (req.body.name, req.body.species, req.body.planet, req.body.gender, req.body.age, req.body.scores);
+		
 		user.match();
+		console.log("user");
+		console.log(user);
 
 		// console.log(user.bestie);
 		res.json(user.bestie);
