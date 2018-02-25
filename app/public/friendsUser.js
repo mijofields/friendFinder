@@ -23,22 +23,22 @@ $('#submit').on("click", function(event){
 			return;
 
 
-	} else if ($('#planet').val() == ""){
+	// } else if ($('#planet').val() == ""){
 
-			alert("Please enter the name of your home planet");
-			return;
+	// 		alert("Please enter the name of your home planet");
+	// 		return;
 
 
-	} 
-	else if ($('#gender').val() == ""){ 
+	// } 
+	// else if ($('#gender').val() == ""){ 
 
-			alert("Please enter your gender");
-			return;
+	// 		alert("Please enter your gender");
+	// 		return;
 
-	} else if ($('#age').val() == ""){
+	// } else if ($('#age').val() == ""){
 
-			alert("Please enter your age, converted to Earth years");
-			return;
+	// 		alert("Please enter your age, converted to Earth years");
+	// 		return;
 
 	} else {
 
@@ -58,18 +58,18 @@ var newUser = {
 
 name: $('#name').val().trim(),
 species: $('#species').val().trim(),
-planet: $('#planet').val().trim(),
-gender: $('#gender').val().trim(),
-age: $('#age').val().trim(),
+// planet: $('#planet').val().trim(),
+// gender: $('#gender').val().trim(),
+// age: $('#age').val().trim(),
 scores: scores
 
 };
 
 	$("#name").val("");
 	$('#species').val("");
-	$('#planet').val("");
-	$('#gender').val("");
-	$('#age').val("");
+	// $('#planet').val("");
+	// $('#gender').val("");
+	// $('#age').val("");
 
 console.log("new user");
 console.log(newUser);
@@ -79,12 +79,15 @@ $.post('/api/friends', newUser, function(res) {
 
 	console.log("res");
 	console.log(res);
+	// console.log(res.name);
+	// console.log(res.scores);
+
+	// res.match();
 
 
 	$("#bestieImg").attr("src", res.photo);
-	$("#bestieText").text("Congrats " + newUser.name + ", your outlook on life makes us sure you will get     have been macthed with our awesome " + res.species + res.name + ". " 
-		+ res.name + " is a " + res.species + " from the planet " + res.planet + " and has " + res.age + 
-		" Earth years. You guys are going to get on brilliantly!");
+	$("#bestieText").text("Congrats " + newUser.name + ", your outlook on life tells us you will get on brilliantly with this excellent "
+	    + res.species + ", "+ res.name + ". " + res.name + " enjoys hanging out with " + newUser.species+"'s. You intergalacgtic rock stars are going to shred!");
 
 	$('#bestieModal').modal('show');
 	return;
@@ -95,6 +98,6 @@ $.post('/api/friends', newUser, function(res) {
 
 
 		}); //end of submit
-return;  //so that when the modal is closed we can run it all again!!!
+// return;  //so that when the modal is closed we can run it all again!!!
 
 });// end of doc ready
