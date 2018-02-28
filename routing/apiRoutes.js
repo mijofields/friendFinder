@@ -17,16 +17,16 @@ module.exports = function(app){
 	app.post('/api/friends', function(req, res) {
 
 
-		console.log("req works");
-		console.log(req.body);
-		console.log("------------------------------");
+		// console.log("req works");
+		// console.log(req.body);
+		// console.log("------------------------------");
 
 		var user =  new User (req.body.name, req.body.species, req.body.scores);
 		
 		user.match();
-		console.log("user bestie");
-		console.log(user);
-		console.log("-------------------------------");
+		// console.log("user bestie");
+		// console.log(user);
+		// console.log("-------------------------------");
 
 		// console.log(user.bestie);
 		res.json(user.bestie); 	
