@@ -55,14 +55,14 @@ scores: scores
 	// $('#gender').val("");
 	// $('#age').val("");
 
-console.log("new user");
-console.log(newUser);
+// console.log("new user");
+// console.log(newUser);
 
 
 $.post('/api/friends', newUser, function(res) {
 
-	console.log("res");
-	console.log(res);
+	// console.log("res");
+	// console.log(res);
 	// console.log(res.name);
 	// console.log(res.scores);
 
