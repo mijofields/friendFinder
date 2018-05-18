@@ -42,31 +42,17 @@ var newUser = {
 
 name: $('#name').val().trim(),
 species: $('#species').val().trim(),
-// planet: $('#planet').val().trim(),
-// gender: $('#gender').val().trim(),
-// age: $('#age').val().trim(),
 scores: scores
 
 };
 
 	$("#name").val("");
 	$('#species').val("");
-	// $('#planet').val("");
-	// $('#gender').val("");
-	// $('#age').val("");
 
-// console.log("new user");
-// console.log(newUser);
 
 
 $.post('/api/friends', newUser, function(res) {
 
-	// console.log("res");
-	// console.log(res);
-	// console.log(res.name);
-	// console.log(res.scores);
-
-	// res.match();
 
 	$('#bestieModalLabel').text("Your Alien Friend Match is " +res.name);
 	$("#bestieImg").attr("src", res.photo);

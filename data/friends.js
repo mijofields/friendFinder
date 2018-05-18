@@ -141,24 +141,11 @@ var User = function (name, species, scores) {
 
 		var compareArr = []; //declare this here instead of globally so the array is always reset when the funtion is called, previously the array was global and never reset, messing up results
 
-		// console.log(this.name);
-		// console.log(this.species);
-		// console.log(this.planet);
-		// console.log(this.gender);
-		// console.log(this.age);
-		// console.log(this.scores);
-		// console.log(this.bestie);
-		// console.log("what is this");
-		// console.log(this);
-		// console.log("-------------------");
 
 
 		for (var i = 0 ; i < friendsArr.length; i ++) {
 
 			var currentObj = friendsArr[i];
-			console.log("currentObj");
-			console.log(currentObj);
-			console.log("---------------------------");
 			var totalDiff = 0;
 
 			for (var j = 0; j < this.scores.length; j++){
@@ -173,21 +160,14 @@ var User = function (name, species, scores) {
 			}; //inner for loop
 
 				compareArr.push(totalDiff);
-				// console.log("compareArr");
-				// console.log(compareArr);
-				// console.log("------------------------------");
-						
+				
 
 		}; //outer for loop
 
-				// console.log(compareArr);
+			
 
 				this.bestie = friendsArr[compareArr.indexOf(Math.min.apply(null, compareArr))]; //Math.moin.apply(null, Arr) gives min number in array
-				// console.log("friendsArr");
-				// console.log(friendsArr);
-				// console.log("bestie in constructor");
-				// console.log(this.bestie);
-				// console.log("-------------------------------");
+			
 
 
 }; //end of match
