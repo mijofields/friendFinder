@@ -131,9 +131,6 @@ var User = function (name, species, scores) {
 
 	this.name = name;
 	this.species = species;
-	// this.planet = planet;
-	// this.gender = gender;
-	// this.age = age;
 	this.scores = scores;
 	this.bestie = "";
 	this.match = function (scores) {

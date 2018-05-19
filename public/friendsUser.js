@@ -1,6 +1,4 @@
 
-
-
 $(document).ready(function() {
 
 
@@ -54,10 +52,10 @@ scores: scores
 $.post('/api/friends', newUser, function(res) {
 
 
-	$('#bestieModalLabel').text("Your Alien Friend Match is " +res.name);
+	$('#bestieModalLabel').text(`Your Alien Friend Match is ${res.name}`);
 	$("#bestieImg").attr("src", res.photo);
-	$("#bestieText").text("Congrats " + newUser.name + ", your outlook on life tells us you will get on brilliantly with this excellent "
-	    + res.species + ", "+ res.name + ". " + res.name + " enjoys hanging out with " + newUser.species+"s. You intergalacgtic rock stars are going to shred!");
+	$("#bestieText").text(`Congrats ${newUser.name}, your outlook on life tells us you will get on brilliantly with this excellent
+	    ${res.species}, ${res.name}. ${res.name} enjoys hanging out with ${newUser.species}s. You intergalacgtic rock stars are going to shred!`);
 
 	$('#bestieModal').modal('show');
 	return;
