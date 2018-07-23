@@ -1,11 +1,11 @@
 //dependencies and boilerplate
 
-var express = require("express");
-var path = require("path");
-var bodyParser = require("body-parser");
+const express = require("express");
+const path = require("path");
+const bodyParser = require("body-parser");
 
-var app = express();
-var port = process.env.PORT || 4812;
+const app = express();
+const port = process.env.PORT || 4812;
 
 
 app.use(bodyParser.json());

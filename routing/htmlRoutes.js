@@ -1,9 +1,9 @@
-var friends = require("../data/friends.js");
-var friendsArr	= friends.friendsArr;
-var User = friends.User;
+const friends = require("../data/friends.js");
+const friendsArr	= friends.friendsArr;
+const User = friends.User;
 
 
-var path = require('path');
+const path = require('path');
 
 
 module.exports = function(app){

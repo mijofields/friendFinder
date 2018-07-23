@@ -1,18 +1,11 @@
-var path = require('path');
+const path = require('path');
 
-var friends = require("../data/friends.js");
-var friendsArr	= friends.friendsArr;
-var bestie = friends.bestie
-var User = friends.User;
-
-// var userData = require("../public/friendsUser.js");
-
+const friends = require("../data/friends.js");
+const friendsArr	= friends.friendsArr;
+const bestie = friends.bestie
+const User = friends.User;
 
 module.exports = function(app){
-	// app.get('/api/friends', function(req, res){
-	// 	res.json(friendsArr);
-	// });
-
 
 	app.post('/api/friends', function(req, res) {
 
