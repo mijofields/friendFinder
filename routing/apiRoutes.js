@@ -1,7 +1,7 @@
 const path = require('path');
 
 const friends = require("../data/friends.js");
-const friendsArr	= friends.friendsArr;
+const friendsArr = friends.friendsArr;
 const bestie = friends.bestie
 const User = friends.User;
 
